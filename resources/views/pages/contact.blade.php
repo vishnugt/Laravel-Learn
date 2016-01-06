@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Wow</title>
-</head>
-<body>
-<h1>Contact me</h1>
-</body>
-</html>
+@extends('app')
+
+@section('content')
+
+@if(count($people))
+    <h3>People I like</h3>
+        <ul>
+            @foreach($people as $person)
+                <li>{{ $person }}</li>
+            @endforeach
+        </ul>
+@endif
+
+
+@stop
